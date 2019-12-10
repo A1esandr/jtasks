@@ -1,6 +1,7 @@
 public class Main {
     public static void main (String[] args) {
-        Stack stack = new Stack(5);
+        System.out.println("========ArrayStack class========");
+        ArrayStack stack = new ArrayStack(5);
 
         try {
             stack.push(1);		// Inserting 1 in the stack
@@ -25,6 +26,7 @@ public class Main {
         else
             System.out.println("Stack is not empty");
 
+        System.out.println("========ListStack class========");
         ListStack listStack = new ListStack(5);
 
         try {
@@ -46,6 +48,32 @@ public class Main {
 
         // check if stack is empty
         if (listStack.isEmpty())
+            System.out.println("Stack is empty");
+        else
+            System.out.println("Stack is not empty");
+
+        System.out.println("========LinkedListStack class========");
+        LinkedListStack linkedListStack = new LinkedListStack(5);
+
+        try {
+            linkedListStack.push(1);		// Inserting 1 in the stack
+            linkedListStack.push(2);		// Inserting 2 in the stack
+
+            linkedListStack.pop();		// removing the top 2
+            linkedListStack.pop();		// removing the top 1
+
+            linkedListStack.push(3);		// Inserting 3 in the stack
+
+            System.out.println("Top element is: " + linkedListStack.peek());
+            System.out.println("Stack size is " + linkedListStack.size());
+
+            linkedListStack.pop();		// removing the top 3
+        } catch (Exception e) {
+            System.out.println("Exception occured: " + e.getMessage());
+        }
+
+        // check if stack is empty
+        if (linkedListStack.isEmpty())
             System.out.println("Stack is empty");
         else
             System.out.println("Stack is not empty");
