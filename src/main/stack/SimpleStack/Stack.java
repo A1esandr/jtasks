@@ -1,3 +1,5 @@
+package stack.SimpleStack;
+
 public interface Stack <T> {
     T pop() throws Exception;           // return the top item and removes it from stack
     void push(T item) throws Exception; // adds an item to the stack

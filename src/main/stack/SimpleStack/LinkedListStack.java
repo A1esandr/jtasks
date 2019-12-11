@@ -1,3 +1,5 @@
+package stack.SimpleStack;
+
 public class LinkedListStack <T> implements Stack <T> {
     private Node head; //the first node
     private int size; // number of items

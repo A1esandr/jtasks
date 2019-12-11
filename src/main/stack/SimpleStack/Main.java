@@ -1,3 +1,5 @@
+package stack.SimpleStack;
+
 public class Main {
     public static void main (String[] args) {
         System.out.println("========ArrayStack class========");

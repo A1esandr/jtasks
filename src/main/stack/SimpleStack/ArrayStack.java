@@ -1,3 +1,5 @@
+package stack.SimpleStack;
+
 class ArrayStack {
     private int arr[];
     private int top;
