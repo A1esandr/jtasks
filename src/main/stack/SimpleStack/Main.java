@@ -79,5 +79,31 @@ public class Main {
             System.out.println("Stack is empty");
         else
             System.out.println("Stack is not empty");
+
+        System.out.println("========LinkedListCollectionStack class========");
+        LinkedListCollectionStack linkedListCollectionStack = new LinkedListCollectionStack(5);
+
+        try {
+            linkedListCollectionStack.push(1);		// Inserting 1 in the stack
+            linkedListCollectionStack.push(2);		// Inserting 2 in the stack
+
+            linkedListCollectionStack.pop();		// removing the top 2
+            linkedListCollectionStack.pop();		// removing the top 1
+
+            linkedListCollectionStack.push(3);		// Inserting 3 in the stack
+
+            System.out.println("Top element is: " + linkedListCollectionStack.peek());
+            System.out.println("Stack size is " + linkedListCollectionStack.size());
+
+            linkedListCollectionStack.pop();		// removing the top 3
+        } catch (Exception e) {
+            System.out.println("Exception occured: " + e.getMessage());
+        }
+
+        // check if stack is empty
+        if (linkedListCollectionStack.isEmpty())
+            System.out.println("Stack is empty");
+        else
+            System.out.println("Stack is not empty");
     }
 }
