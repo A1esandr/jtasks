@@ -1,25 +1,24 @@
 package findsubset;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.Arrays;
 
 public class Main {
-    public static void main(String[] args){
-        Integer result = 0;
-        if (args.length < 2) {
+    public static void main(String[] args) throws Exception {
+        int result = 0;
+        BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
+
+        String J = r.readLine();
+        String S = r.readLine();
+
+        if (J.isEmpty() || S.isEmpty()) {
             System.out.print(result);
             return;
         }
 
-        if (args[0].isEmpty() || args[1].isEmpty()) {
-            System.out.print(result);
-            return;
-        }
-
-//        System.out.println(args[0]);
-//        System.out.println(args[1]);
-
-        char[] jewelry = args[0].toCharArray();
-        char[] rocks = args[1].toCharArray();
+        char[] jewelry = J.toCharArray();
+        char[] rocks = S.toCharArray();
         Arrays.sort(jewelry);
         Arrays.sort(rocks);
 
