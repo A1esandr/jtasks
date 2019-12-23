@@ -21,11 +21,12 @@ public class MainIntFile {
         int last = 0;
         int next = Integer.parseInt(r.readLine());
         ints[last] = next;
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb;
         for(int i = 1; i < sizeInt; i++){
             next = Integer.parseInt(r.readLine());
             if (next > ints[last]){
                 if(last == 99){
+                    sb = new StringBuilder();
                     for(int a = 0; a < 100; a++){
                         sb.append(ints[a]);
                         sb.append("\n");
